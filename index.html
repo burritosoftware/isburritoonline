@@ -33,9 +33,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 $.getJSON('https://discord.com/api/guilds/419367512262705152/widget.json', function(data) {
-var widget = JSON.parse(data);
-var listmembers = widget.members
-if listmembers.username == "Sc2ad"){
+widget = JSON.parse(data);
+if widget.members.indexOf("Sc2ad"){
     document.getElementById('displaytext').innerText = 'YES'
 });
 </script>
