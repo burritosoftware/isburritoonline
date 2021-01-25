@@ -2,8 +2,6 @@
 <head>
 <style type="text/css">
 
-    /*html, body {height: 100%;}*/
-
     body {
       color: black;
       background-color: white;
@@ -41,7 +39,9 @@
     var tags;
     (async () => {
   widget = await get()
-if(widget.members.username == "Sc2ad")
+  index = widget.members
+  const found = some(index => index.username === 'Sc2ad');
+if(!found)
   document.getElementById('widget').innerText = 'YES';
 })()
     </script>
