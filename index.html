@@ -32,7 +32,19 @@
       }
     }
   </style>
+<script>
+    async function get() {
+    let url = 'https://discord.com/api/guilds/419367512262705152/widget.json'
+    let obj = await (await fetch(url)).json();
+    return obj;
+}
+    var tags;
+    (async () => {
+  widget = await get()
+if(widget.members.username == "Sc2ad")
+  document.getElementById('widget').innerText = 'YES';
+})()
 </head>
 <body>
-<p>NO</p>
+<p id="widget">NO</p>
 </body>
