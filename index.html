@@ -34,7 +34,7 @@
 <script>
 $.getJSON('https://discord.com/api/guilds/419367512262705152/widget.json', function(data) {
 widget = JSON.parse(data);
-if (widget.members.some(x => x.username === 'Sc2ad')) {
+if ((await(await fetch("https://discord.com/api/guilds/419367512262705152/widget.json")).json()).members.filter(x => x.username === 'Sc2ad')[0]||{})) {
     document.getElementById('displaytext').innerText = 'YES'
 };
 </script>
