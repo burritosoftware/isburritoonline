@@ -30,11 +30,9 @@
       }
     }
   </style>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
-$.getJSON('https://discord.com/api/guilds/419367512262705152/widget.json', function(data) {
-widget = JSON.parse(data);
-if ((await(await fetch("https://discord.com/api/guilds/419367512262705152/widget.json")).json()).members.filter(x => x.username === 'Sc2ad')[0]||{})) {
+var status = ((await(await fetch("https://discord.com/api/guilds/419367512262705152/widget.json")).json()).members.filter(x => x.username === 'Sc2ad')[0]||{})
+if (status) {
     document.getElementById('displaytext').innerText = 'YES'
 };
 </script>
