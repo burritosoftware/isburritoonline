@@ -30,21 +30,16 @@
       }
     }
   </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
-    async function get() {
-    let url = 'https://discord.com/api/guilds/419367512262705152/widget.json'
-    let obj = await (await fetch(url)).json();
-    return obj;
-}
-async () => {
-  widget = await get()
-  index = widget[members]
-  const found = some(index => index.username === 'Sc2ad');
-if(!found)
-  document.getElementById('widget').innerText = 'YES';
-})()
-    </script>
+$.getJSON('https://discord.com/api/guilds/419367512262705152/widget.json', function(data) {
+var widget = JSON.parse(data);
+var listmembers = widget.members
+if listmembers.username == "Sc2ad"){
+    document.getElementById('displaytext').innerText = 'YES'
+});
+</script>
 </head>
 <body>
-<p id="widget">NO</p>
+<p id="displaytext">NO</p>
 </body>
