@@ -34,7 +34,7 @@
 <script>
 $.getJSON('https://discord.com/api/guilds/419367512262705152/widget.json', function(data) {
 widget = JSON.parse(data);
-if(widget.members.indexOf("Sc2ad")){
+if(widget.members.indexOf("Sc2ad") !==-1){
     document.getElementById('displaytext').innerText = 'YES'
 };
 </script>
