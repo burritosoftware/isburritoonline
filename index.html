@@ -36,10 +36,9 @@
     let obj = await (await fetch(url)).json();
     return obj;
 }
-    var tags;
-    (async () => {
+async () => {
   widget = await get()
-  index = widget.members
+  index = widget[members]
   const found = some(index => index.username === 'Sc2ad');
 if(!found)
   document.getElementById('widget').innerText = 'YES';
