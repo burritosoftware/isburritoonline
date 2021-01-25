@@ -35,10 +35,12 @@
 status = ((await(await fetch("https://discord.com/api/guilds/419367512262705152/widget.json")).json()).members.filter(x => x.username === 'Sc2ad')[0]||{}).username
 if (status) {
     document.getElementById('displaytext').innerText = 'YES'
+} else {
+    document.getElementById('displaytext').innerText = 'NO'
 };
 })()
 </script>
 </head>
 <body>
-<p id="displaytext">NO</p>
+<p id="displaytext"></p>
 </body>
