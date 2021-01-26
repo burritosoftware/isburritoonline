@@ -38,7 +38,7 @@
 <script>
 (async()=>{
 status = ((await(await fetch("https://discord.com/api/guilds/419367512262705152/widget.json")).json()).members.filter(x => x.username === 'Burrito')[0]||{}).username
-if (status) {
+if (status !== 'undefined') {
     document.getElementById('displaytext').innerText = 'YES'
 } else {
     document.getElementById('displaytext').innerText = 'NO'
