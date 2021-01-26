@@ -1,4 +1,3 @@
-# Is Sc2ad online?
+# Is Burrito Online?
 
-Joke website made for the Quest modders at the Beat Saber Modding Group.  
-Credit to eaic for a heck of a ton of help on the JavaScript (i'm terrible at it)
+Fork of another project made by eaic and I, [Is Sc2ad online?](https://github.com/burritosoftware/issc2adonline)
